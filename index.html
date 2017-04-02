@@ -84,7 +84,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>版权声明：本文为博主原创文章，未经博主允许不得转载。</p>
-<h1>1.Environment</h1><br>1.Download wiremock-standalone jar:<a href="http://repo1.maven.org/maven2/com/github/tomakehurst/wiremock-standalone/2.5.1/wiremock-standalone-2.5.1.jar" target="_blank" rel="external">wiremock-standalone JAR </a><br><br>2.Open cmd, cd to the path where the wiremock-standalone jar located, execute command<br>java -jar wiremock-standalone-2.5.1.jar<br><br>3.Two folders mappings and __files will be generated.<br><br><h1>2.Your first mock api</h1><br>1.Put json file inside mappings folder, i.e<br><br>demo1.json<br>{“request”:{“method”:”GET”,”url”:”/api/wiremocktest1”},”response”:{“status”:200,”body”:”Hello World!\nHello World”}}<br><br><b>Note:No newline character is NOT REQUIRED inside the json file</b><br><br>2.Execute the command java -jar wiremock-standalone-2.5.1.jar<br><br>3.Open <a href="http://localhost:8080/api/wiremocktest1" target="_blank" rel="external">http://localhost:8080/api/wiremocktest1</a> (this url is inside the demo1.json file) in browser.<br><br><h1>3.Return json in response</h1>
+<h1>1.Environment</h1><br>1.Download wiremock-standalone jar:<a href="http://repo1.maven.org/maven2/com/github/tomakehurst/wiremock-standalone/2.5.1/wiremock-standalone-2.5.1.jar" target="_blank" rel="external">wiremock-standalone JAR </a><br><br>2.Open cmd, cd to the path where the wiremock-standalone jar located, execute command<br>java -jar wiremock-standalone-2.5.1.jar<br><br>3.Two folders mappings and __files will be generated.<br><br><h1>2.Your first mock api</h1><br>1.Put json file inside mappings folder, i.e<br><br>demo1.json<br>{“request”:{“method”:”GET”,”url”:”/api/wiremocktest1”},”response”:{“status”:200,”body”:”Hello World!\nHello World”}}<br><br><b>Note:Newline character is NOT REQUIRED inside the json file</b><br><br>2.Execute the command java -jar wiremock-standalone-2.5.1.jar<br><br>3.Open <a href="http://localhost:8080/api/wiremocktest1" target="_blank" rel="external">http://localhost:8080/api/wiremocktest1</a> (this url is inside the demo1.json file) in browser.<br><br><h1>3.Return json in response</h1>
 
 <p>1.json is not alowed in body, write a new json file and put in __files folder. i.e </p>
 <p> myJsonBody.json<br> {“CaseId”:123,”WhateverId”:”abc”}</p>
@@ -95,7 +95,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://zouxuan1989.github.io/2017/03/11/WireMock_Mac_Standalone/" data-id="cj10sx8gu000471e2r4pa17dl" class="article-share-link">Share</a>
+      <a data-url="https://zouxuan1989.github.io/2017/03/11/WireMock_Mac_Standalone/" data-id="cj10t1kq10001ame2f9vpyrek" class="article-share-link">Share</a>
       
       
     </footer>
