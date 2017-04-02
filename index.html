@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://zouxuan1989.github.io"></form>
@@ -84,20 +84,18 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>版权声明：本文为博主原创文章，未经博主允许不得转载。</p>
-<h1>Environment</h1><br>1.Download wiremock-standalone jar:<a href="http://repo1.maven.org/maven2/com/github/tomakehurst/wiremock-standalone/2.5.1/wiremock-standalone-2.5.1.jar" target="_blank" rel="external">wiremock-standalone JAR </a><br><br>2.Open cmd, cd to the path where the wiremock-standalone jar located, execute command<br>java -jar wiremock-standalone-2.5.1.jar<br><br>3.Two folders mappings and __files will be generated.<br><br><h1>First mock api</h1><br>1.Put json file inside mappings folder, i.e<br>demo1.json<br>{“request”:{“method”:”GET”,”url”:”/api/wiremocktest1”},”response”:{“status”:200,”body”:”Hello World!\nHello World”}}<br><br><b>Note:No newline character is allowed inside the json file</b><br><br>2.Execute the command in step 2.<br><br>3. Open <a href="http://localhost:8080/api/wiremocktest1" target="_blank" rel="external">http://localhost:8080/api/wiremocktest1</a> (this url is same as inside the demo1.json file) in browser.<br><br><h1>Return json in response</h1>
+<h1>1.Environment</h1><br>1.Download wiremock-standalone jar:<a href="http://repo1.maven.org/maven2/com/github/tomakehurst/wiremock-standalone/2.5.1/wiremock-standalone-2.5.1.jar" target="_blank" rel="external">wiremock-standalone JAR </a><br><br>2.Open cmd, cd to the path where the wiremock-standalone jar located, execute command<br>java -jar wiremock-standalone-2.5.1.jar<br><br>3.Two folders mappings and __files will be generated.<br><br><h1>2.Your first mock api</h1><br>1.Put json file inside mappings folder, i.e<br><br>demo1.json<br>{“request”:{“method”:”GET”,”url”:”/api/wiremocktest1”},”response”:{“status”:200,”body”:”Hello World!\nHello World”}}<br><br><b>Note:No newline character is NOT REQUIRED inside the json file</b><br><br>2.Execute the command java -jar wiremock-standalone-2.5.1.jar<br><br>3.Open <a href="http://localhost:8080/api/wiremocktest1" target="_blank" rel="external">http://localhost:8080/api/wiremocktest1</a> (this url is inside the demo1.json file) in browser.<br><br><h1>3.Return json in response</h1>
 
 <p>1.json is not alowed in body, write a new json file and put in __files folder. i.e </p>
-<p> myJsonBody.json</p>
-<p> {“CaseId”:123,”WhateverId”:”abc”}</p>
-<p>2.The json file inside mappings folder will be<br>demo2.json</p>
-<p>{“request”:{“method”:”GET”,”url”:”/api/wiremocktest2”},”response”:{“status”:200,”bodyFileName”:”myJsonBody.json”}}</p>
+<p> myJsonBody.json<br> {“CaseId”:123,”WhateverId”:”abc”}</p>
+<p>2.The json file inside mappings folder will be<br>demo2.json<br>{“request”:{“method”:”GET”,”url”:”/api/wiremocktest2”},”response”:{“status”:200,”bodyFileName”:”myJsonBody.json”}}</p>
 <p><b>Note:response body will be change to bodyFileName</b></p>
-<p>9.Any change in demo2.json,java -jar wiremock-standalone-2.5.1.jar is needed to execute. Change in myJsonBody.json will show immediately without executing the command.</p>
+<p>9.Any change in demo2.json,java -jar wiremock-standalone-2.5.1.jar is required to execute. Change in myJsonBody.json will show immediately without executing the command.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://zouxuan1989.github.io/2017/03/11/WireMock_Mac_Standalone/" data-id="cj10sne2l0004z6e2i4ctr2zg" class="article-share-link">Partager</a>
+      <a data-url="https://zouxuan1989.github.io/2017/03/11/WireMock_Mac_Standalone/" data-id="cj10swwmx00016be2el6kl2ue" class="article-share-link">Share</a>
       
       
     </footer>
@@ -132,7 +130,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -153,7 +151,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 Zou Xuan<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
